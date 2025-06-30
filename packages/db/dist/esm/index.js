@@ -1,0 +1,10 @@
+import 'reflect-metadata';
+import { BaseSqlDatabase } from './base-sql.js';
+import { openDb } from './db/index.js';
+export class SqliteDatabase extends BaseSqlDatabase {
+    datasource;
+    constructor(location){
+        super();
+        this.datasource = openDb(location);
+    }
+}

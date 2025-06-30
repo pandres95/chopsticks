@@ -1,0 +1,7 @@
+import 'reflect-metadata';
+import type { DataSource } from 'typeorm';
+import { BaseSqlDatabase } from './base-sql.js';
+export declare class SqliteDatabase extends BaseSqlDatabase {
+    datasource: Promise<DataSource>;
+    constructor(location: string);
+}
